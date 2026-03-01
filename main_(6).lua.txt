@@ -2015,20 +2015,6 @@ ag.UIElements.Main,
 
 
 })
-local glowStroke = Instance.new("UIStroke")
-glowStroke.Name = "GlowBorder"
-glowStroke.Color = Color3.fromRGB(255, 182, 193)
-glowStroke.Thickness = 2
-glowStroke.Transparency = 0.5
-glowStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-glowStroke.Parent = ag.UIElements.MainContainer
-
-local glowTween = game:GetService("TweenService"):Create(
-    glowStroke, 
-    TweenInfo.new(1.5, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true), 
-    {Transparency = 0.8}
-)
-glowTween:Play()
 
 function ag.Open(ah)
 if not ae then
@@ -10584,10 +10570,7 @@ PaddingBottom=UDim.new(0,as.UIPadding/2),
 
 local az=ak("ImageLabel",{
 Image="rbxassetid://8992230677",
-ThemeTag={
-ImageColor3="WindowShadow",
-
-},
+ImageColor3=Color3.fromRGB(255, 105, 180),
 ImageTransparency=1,
 Size=UDim2.new(1,120,1,116),
 Position=UDim2.new(0,-60,0,-58),
